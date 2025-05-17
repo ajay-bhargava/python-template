@@ -1,4 +1,3 @@
-_min_copier_version: "7.0"
 project_name:
   type: str
   help: What is the name of your project?
@@ -13,3 +12,19 @@ project_author_email:
   help: What is your email?
 project_author_github:
   type: str
+_message_after_copy: |
+  Your project "{{project_name}}" has been created!
+  
+  Next steps:
+
+  1. Change into the project directory:
+
+     $ cd {{ _copier_conf.dst_path }}
+
+  2. Install dependencies:
+
+     uv sync
+
+  3. Activate the virtual environment:
+
+     source .venv/bin/activate
