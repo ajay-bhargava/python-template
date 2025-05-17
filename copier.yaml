@@ -12,6 +12,7 @@ project_author_email:
   help: What is your email?
 project_author_github:
   type: str
+  help: What is your GitHub username?
 _message_after_copy: |
   Your project "{{project_name}}" has been created!
   
