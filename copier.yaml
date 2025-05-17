@@ -1,6 +1,6 @@
 project_name:
   type: str
-  help: What is the name of your project?
+  help: What is the name of your project? No spaces, no special characters.
 project_description:
   type: str
   help: Describe your project in one sentence.
@@ -29,3 +29,7 @@ _message_after_copy: |
   3. Activate the virtual environment:
 
      source .venv/bin/activate
+
+  4. Initialize Git:
+
+     git init
