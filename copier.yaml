@@ -1,0 +1,35 @@
+project_name:
+  type: str
+  help: What is the name of your project? No spaces, no special characters.
+project_description:
+  type: str
+  help: Describe your project in one sentence.
+project_author:
+  type: str
+  help: What is your name?
+project_author_email:
+  type: str
+  help: What is your email?
+project_author_github:
+  type: str
+  help: What is your GitHub username?
+_message_after_copy: |
+  Your project "{{project_name}}" has been created!
+  
+  Next steps:
+
+  1. Change into the project directory:
+
+     $ cd {{ _copier_conf.dst_path }}
+
+  2. Install dependencies:
+
+     uv sync
+
+  3. Activate the virtual environment:
+
+     source .venv/bin/activate
+
+  4. Initialize Git:
+
+     git init

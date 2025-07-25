@@ -1,0 +1,30 @@
+[project]
+name = "{{ project_name }}"
+version = "0.1.0"
+description = "{{ project_description }}"
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [
+    { name = "{{ project_author }}", email = "{{ project_author_email }}" }
+]
+dependencies = [
+    "pytest",
+]
+
+[build-system]
+requires = ["setuptools>=42.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["{{project_name}}"]
+package-dir = {"{{project_name}}" = "src/{{project_name}}"}
+
+[tool.ruff]
+src = ["src"]
+line-length = 100
+select = ["E", "F", "B", "I"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["__test__"]
+addopts = "-ra -q"
